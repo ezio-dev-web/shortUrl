@@ -1,0 +1,29 @@
+<h1 class="text-center my-5">Iniciar Sesion</h1>
+
+<div class="row justify-content-center">
+   <div class="col-md-6">
+      <form action="/auth/login" method="post">
+         <input type="hidden" name="_csrf" value="{{csrfToken}}">
+         <input 
+            type="text"
+            name="email"   
+            class="form-control mb-2"
+            placeholder="email"
+            value="cris@test.com"
+         >
+         <input 
+            type="password"
+            name="password"   
+            class="form-control mb-2"
+            placeholder="password"
+            value="qwert123"
+         >
+         <button
+            type="submit"
+            class="btn btn-primary"
+         >
+            acceder
+         </button>
+      </form>
+   </div>
+</div>
