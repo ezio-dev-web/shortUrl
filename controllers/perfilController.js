@@ -54,7 +54,9 @@ module.exports.editarFotoPerfil = (req, res) => {
             __dirname, 
             `../public/img/perfiles/${req.user.id}.${extension}`
          )
-         fs.renameSync(file.filepath, dirFile)
+         fs.rename(file.filepath, dirFile, () => {
+
+         })
 
          const image = await Jimp.read(dirFile)
          image.resize(200, 200).quality(90).writeAsync(dirFile)
